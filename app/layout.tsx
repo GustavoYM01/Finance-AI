@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import { Mulish } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const mulish = Mulish({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -31,7 +33,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} dark antialiased`}>{children}</body>
+      <ClerkProvider
+        appearance={{
+          baseTheme: dark,
+        }}
+      >
+        <body className={`${mulish.className} dark antialiased`}>
+          {children}
+        </body>
+      </ClerkProvider>
     </html>
   );
 }

@@ -27,7 +27,7 @@ enum TransactionType {
 }
 
 enum TransactionCategory {
-  HOUSTING
+  HOUSING
   TRANSPORTATION
   FOOD
   ENTERTAINMENT

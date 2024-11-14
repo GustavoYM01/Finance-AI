@@ -8,6 +8,7 @@ import TransactionPieChart from "./_components/transactions-pie-chart";
 import { getDashboard } from "../_data/get-dashboard";
 import ExpensesPerCategory from "./_components/expenses-per-category";
 import LastTransactions from "./_components/last-transaction";
+import { ScrollArea } from "../_components/ui/scroll-area";
 
 interface HomeProps {
   searchParams: {
@@ -33,7 +34,9 @@ const Home = async ({ searchParams: { month, year } }: HomeProps) => {
             <div className="flex flex-col gap-6 overflow-hidden">
               <SummaryCards {...dashboard} />
               <div className="grid grid-cols-3 grid-rows-1 gap-6 overflow-hidden">
-                <TransactionPieChart {...dashboard} />
+                <ScrollArea className="h-full">
+                  <TransactionPieChart {...dashboard} />
+                </ScrollArea>
                 <ExpensesPerCategory
                   expensesPerCateggory={dashboard.totalExpensePerCategory}
                 />

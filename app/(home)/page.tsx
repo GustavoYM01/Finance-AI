@@ -9,6 +9,7 @@ import { getDashboard } from "../_data/get-dashboard";
 import ExpensesPerCategory from "./_components/expenses-per-category";
 import LastTransactions from "./_components/last-transaction";
 import { ScrollArea } from "../_components/ui/scroll-area";
+import { canUserAddTransaction } from "../_data/can-user-add-transaction";
 
 interface HomeProps {
   searchParams: {
@@ -22,6 +23,7 @@ const Home = async ({ searchParams: { month, year } }: HomeProps) => {
   if (!userId) redirect("/login");
   if (isMatch(month ?? "", "MM") && isMatch(year ?? "", "yyyy")) {
     const dashboard = await getDashboard(month, year);
+    const userCanAddTransaction = await canUserAddTransaction();
     return (
       <>
         <Navbar />
@@ -32,7 +34,10 @@ const Home = async ({ searchParams: { month, year } }: HomeProps) => {
           </div>
           <div className="grid grid-cols-[2fr,1fr] gap-6 overflow-hidden">
             <div className="flex flex-col gap-6 overflow-hidden">
-              <SummaryCards {...dashboard} />
+              <SummaryCards
+                {...dashboard}
+                userCanAddTransaction={userCanAddTransaction as boolean}
+              />
               <div className="grid grid-cols-3 grid-rows-1 gap-6 overflow-hidden">
                 <ScrollArea className="h-full">
                   <TransactionPieChart {...dashboard} />

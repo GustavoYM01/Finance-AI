@@ -27,7 +27,6 @@ const AddTransactionButton = ({
               <Button
                 className="cursor-not-allowed rounded-full font-bold"
                 onClick={(event) => {
-                  setDialogIsOpen(true);
                   event.preventDefault();
                 }}
               >

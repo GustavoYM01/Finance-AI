@@ -43,7 +43,7 @@ export const generateAiReport = async ({
   ${transactions
     .map(
       (transaction) =>
-        `${transaction.date.toLocaleDateString("pt-BR")}-R$${transaction.amount}-${transaction.type}-${transaction.category}`,
+        `${transaction.date.toLocaleDateString("pt-BR")}-${transaction.type}-R$${transaction.amount}-${transaction.category}`,
     )
     .join(";")}`;
   const completion = await openAi.chat.completions.create({

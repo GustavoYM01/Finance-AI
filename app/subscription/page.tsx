@@ -39,8 +39,9 @@ const SubscriptionPage = async () => {
               <div className="flex items-center gap-2">
                 <CheckIcon className="text-primary" />
                 <p>
-                  Apenas 10 transações por mês (
-                  {currentMonthTransacations as number}/10)
+                  Apenas 10 transações por mês{" "}
+                  {!hasPremiumPlan &&
+                    `(${currentMonthTransacations as number}/10)`}
                 </p>
               </div>
               <div className="flex items-center gap-2">

@@ -15,7 +15,9 @@ Lista de tecnologias utilizadas no projeto:
 - [Prisma](https://www.prisma.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Shadcn](https://mantine.dev/)
+- [Shadcn](https://ui.shadcn.com/)
+- [Clerk](https://clerk.com/)
+- [Stripe](https://stripe.com/)
 
 ## Sobre o Projeto
 

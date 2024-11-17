@@ -6,6 +6,8 @@
  <img width="2284" alt="capa_fsw_6" src="https://github.com/user-attachments/assets/3974d5b9-9926-47d7-8aec-6be6d1ec7631">
 </h2>
 
+## Acesse em: https://finance-ai-teal.vercel.app/
+
 ## Tecnologias
 
 Lista de tecnologias utilizadas no projeto:

@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-    <img alt="Finance AI" src="https://github.com/GustavoYM01/Finance-AI/blob/main/public/login.png" />
+ <img width="2284" alt="capa_fsw_6" src="https://github.com/user-attachments/assets/3974d5b9-9926-47d7-8aec-6be6d1ec7631">
 </h2>
 
 ## Tecnologias
